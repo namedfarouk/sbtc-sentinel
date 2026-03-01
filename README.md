@@ -85,8 +85,8 @@ MIT
 
 Save. Now create one more file — right-click **backend** folder → **New File** → name it `.env.example`:
 ```
-DEEPSEEK_API_KEY=your_deepseek_api_key_here
-TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
-STACKS_API_URL=https://api.testnet.hiro.so
-CONTRACT_ADDRESS=your_stacks_address_here
-CONTRACT_NAME=sentinel
+DEEPSEEK_API_KEY=your_deepseek_api_key_here 
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here 
+STACKS_API_URL=https://api.testnet.hiro.so 
+CONTRACT_ADDRESS=your_stacks_address_here 
+CONTRACT_NAME=sentinel 
