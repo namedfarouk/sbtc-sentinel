@@ -224,19 +224,25 @@ export default function Home() {
   const connectWallet = async () => {
     setConnectingWallet(true);
     try {
-      const { showConnect } = await import("@stacks/connect");
-      showConnect({
+      const mod = await import("@stacks/connect");
+      const appConfig = new mod.AppConfig(["store_write"]);
+      const userSession = new mod.UserSession({ appConfig });
+
+      mod.showConnect({
         appDetails: {
           name: "sBTC Sentinel",
           icon: "https://www.stacks.co/favicon.ico",
         },
-        onFinish: (data: any) => {
-          const addr = data.userSession.loadUserData().profile.stxAddress.testnet;
+        onFinish: () => {
+          const userData = userSession.loadUserData();
+          const addr = userData.profile.stxAddress.testnet;
           setWalletAddress(addr);
           setConnectingWallet(false);
         },
-        onCancel: () => setConnectingWallet(false),
-        userSession: undefined as any,
+        onCancel: () => {
+          setConnectingWallet(false);
+        },
+        userSession,
       });
     } catch (e) {
       console.error("Wallet connect failed", e);
