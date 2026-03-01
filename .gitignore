@@ -1,0 +1,9 @@
+backend/venv/
+backend/.env
+__pycache__/
+*.pyc
+node_modules/
+.next/
+.DS_Store
+contracts/settings/Testnet.toml
+contracts/settings/Mainnet.toml
