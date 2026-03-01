@@ -74,9 +74,6 @@ Users --> Telegram Bot / Web Dashboard
     Stacks Blockchain (Clarity Contract)
 ```
 
-## Built For
-
-Stacks Getting Started Grant - Q1 2026
 
 ## License
 
